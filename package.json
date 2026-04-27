@@ -1,6 +1,6 @@
 {
   "name": "pulse-scp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A modern terminal UI wrapper around system scp.",
   "type": "module",
   "bin": {
