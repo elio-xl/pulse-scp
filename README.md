@@ -7,16 +7,20 @@ It does not implement SSH, SFTP, or SCP protocols. Pulse delegates transfer work
 ## Install
 
 ```bash
-npm install
-npm run build
-npm link
+npm install -g pulse-scp
 ```
 
-After linking:
+After installing globally:
 
 ```bash
 pulse ./app.jar root@192.168.0.26:/data/app.jar
 pulse root@192.168.0.26:/data/app.jar ./app.jar
+```
+
+You can also run it without a global install:
+
+```bash
+npx pulse-scp ./app.jar root@192.168.0.26:/data/app.jar
 ```
 
 ## Usage
