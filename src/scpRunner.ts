@@ -255,6 +255,9 @@ export class ScpRunner extends EventEmitter {
     this.state.elapsedSeconds = elapsedSeconds(this.state.startTime, this.state.endTime);
     if (this.state.progress) {
       this.state.progress.percent = 100;
+      if (this.state.plan.sizeBytes !== undefined) {
+        this.state.progress.transferredBytes = this.state.plan.sizeBytes;
+      }
     }
     this.emitState();
     this.emit("done", this.state);
